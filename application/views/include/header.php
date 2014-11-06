@@ -7,7 +7,7 @@
    <meta name="keywords" content="">
    <meta name="author" content="">
 
-   <title>CodeIgniter Bootstrap</title>
+   <title><?php echo $_namaPendek ?></title>
 
    <link href="<?php echo base_url('asset/css/bootstrap.min.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('asset/css/font-awesome.css') ?>" rel="stylesheet">

@@ -19,11 +19,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$d['_nama'] = $this->config->item('_nama');
-		$this->load->view('include/header');
+		$d['_nama']		  = $this->config->item('_nama');
+		$d['_namaPendek'] = $this->config->item('_namaPendek');
+		$this->load->view('include/header',$d);
 //	    $this->load->view('frontpage');
-	    $this->load->view('templates/login');
-	    $this->load->view('include/footer');
+	    $this->load->view('templates/login',$d);
+	    $this->load->view('include/footer',$d);
 	}
 }
 

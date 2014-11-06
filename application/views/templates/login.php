@@ -1,5 +1,5 @@
 <div style="width: 320px; margin: 0 auto;">
-   <h3>Login</h3>
+   <h3>Login <?php echo $_nama; ?></h3>
    <? if (!empty($error)): ?>
       <div class="alert alert-error">
          <b>Error!</b> <?= $error ?>
