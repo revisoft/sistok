@@ -19,7 +19,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$d['_nama'] = $this->config->item('_nama');
+		$this->load->view('welcome_message',$d);
 	}
 }
 

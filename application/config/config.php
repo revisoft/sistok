@@ -14,7 +14,9 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$root	= "http://".$_SERVER['HTTP_HOST'];
+$root   .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+$config['base_url'] 	= '$root';
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +28,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +226,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'app-mystock';
 
 /*
 |--------------------------------------------------------------------------
@@ -358,5 +360,16 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+|--------------------------------------------------------------------------
+|Configuration Aplikasi
+|--------------------------------------------------------------------------
+*/
+$config['_nama']		= "Sistem Informasi Stock";
+$config['_namaPendek']= "Sistok";
+$config['_perusahaan']= "Demo - Indonesia";
+$config['_alamat']	= "Surabaya - Indonesia";
+$config['_page']		= 15;
+$config['_version']	= 1.0;
 /* End of file config.php */
 /* Location: ./application/config/config.php */
