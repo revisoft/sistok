@@ -11,9 +11,11 @@
    <? endif; ?>
    <form class="well" method="POST">
       <label>Username</label>
-      <input type="text" name="username" style="width: 260px;" <? if (!empty($username)): ?> value="<?= $username ?>" <? endif; ?>>
+      <input type="text" name="username" style="width: 260px;" 
+         <? if (!empty($username)): ?> 
+         value="<?= $username ?>" <? endif; ?> placeholder="Entry UserID....">
       <label>Password</label>
-      <input type="password" name="password" style="width: 260px;">
+      <input type="password" name="password" style="width: 260px;" placeholder="Entry Password...">
       <button type="submit" class="btn btn-primary">Login</button>
    </form>
 </div>
