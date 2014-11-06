@@ -1,4 +1,0 @@
-sistok
-======
-
-Aplikasi Stock
