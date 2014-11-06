@@ -20,7 +20,10 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$d['_nama'] = $this->config->item('_nama');
-		$this->load->view('welcome_message',$d);
+		$this->load->view('include/header');
+//	    $this->load->view('frontpage');
+	    $this->load->view('templates/login');
+	    $this->load->view('include/footer');
 	}
 }
 

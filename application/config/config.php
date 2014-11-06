@@ -16,7 +16,7 @@
 */
 $root	= "http://".$_SERVER['HTTP_HOST'];
 $root   .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
-$config['base_url'] 	= '$root';
+$config['base_url'] 	= '';
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ $config['base_url'] 	= '$root';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -371,5 +371,22 @@ $config['_perusahaan']= "Demo - Indonesia";
 $config['_alamat']	= "Surabaya - Indonesia";
 $config['_page']		= 15;
 $config['_version']	= 1.0;
+
+/*
+| -------------------------------------------------------------------
+|  Native Auto-load
+| -------------------------------------------------------------------
+| 
+| Nothing to do with config/autoload.php, this allows PHP autoload to work
+| for base controllers and some third-party libraries.
+|
+*/
+function __autoload($class)
+{
+	if(strpos($class, 'CI_') !== 0)
+ 	{
+  		@include_once( APPPATH . 'core/'. $class . EXT );
+ 	}
+}
 /* End of file config.php */
 /* Location: ./application/config/config.php */
